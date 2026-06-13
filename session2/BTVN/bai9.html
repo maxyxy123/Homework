@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <hr>
+    <form action="/test.api" method="post" enctype="multipart/form-data">
+        <fieldset style="margin-bottom: 10px;">
+          <legend>Thông tin liên hệ</legend>
+          <label>Họ và tên</label>
+          <input type="text">
+           <br /><br />
+          <label>Số điện thoại:</label>
+          <input type="tel" pattern="0[1-9][0-9]{8}" placeholder="0912345678" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Hồ sơ đính kèm</legend>
+          <label>Tải lên CV (Định dạng PDF/Word) :</label>
+          <input type="file">
+        </fieldset>
+      <button type="submit">Nộp hồ sơ</button>
+    </form>
+  </body>
+</html>
