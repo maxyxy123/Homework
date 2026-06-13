@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <hr>
+    <form>
+      <h1>Đăng ký Đặt Vé Sự Kiện Âm Nhạc</h1>
+      <label>Họ và tên</label>
+      <input
+        type="text"
+        minlength="3"
+        maxlength="50"
+        placeholder="Nhập họ và tên"
+        required
+      />
+      <br /><br />
+      <label>Số lượng vé:</label>
+      <input type="number" min="1" max="5" placeholder="5" />
+      <br /><br />
+      <label>Mua vé VIP (Đã cấp sẵn):</label>
+      <input type="text" placeholder="MUSIC-VIP-2026" readonly />
+      <br /><br />
+      <label>Mã giảm giá nội bộ:</label>
+      <input type="text" placeholder="NOT-ELIGIBLE" disabled />
+      <br /><br />
+      <button type="submit">Xác nhận đặt vé</button>
+    </form>
+  </body>
+</html>
