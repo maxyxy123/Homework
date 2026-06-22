@@ -1,0 +1,27 @@
+.main-container{
+    width: 50vw;
+    padding: min(3rem,3vw);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-family: Helvetica Neue ,Arial , sans-serif;
+    border: 1px solid grey;
+
+}
+.author {
+    font-weight: bold;
+    
+   
+}
+.role{
+     font-size: 1.3rem;
+      color: #666;
+     margin-bottom: 10px;
+     
+}
+
+.mt{
+    font-size: 0.9rem;
+    line-height: 1.5;
+}

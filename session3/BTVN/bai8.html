@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>document</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    .quote-box {
+      position: relative;
+      width: 850px;
+      background: #fff;
+      padding: 55px 80px 45px 90px;
+      border-left: 6px solid #1f8acb;
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .quote-box::before {
+      content: "“";
+      position: absolute;
+      top: 42px;
+      left: 42px;
+      font-size: 58px;
+      color: hsl(0, 0%, 78%);
+      font-weight: bold;
+    }
+
+    .quote-box::after {
+      content: "”";
+      position: absolute;
+      right: 42px;
+      bottom: 82px;
+      font-size: 58px;
+      color: hsl(0, 0%, 78%);
+      font-weight: bold;
+    }
+
+    .quote-text {
+      font-size: 28px;
+      line-height: 1.8;
+      color: hsl(0, 0%, 35%);
+      font-style: italic;
+      text-align: left;
+    }
+
+    .quote-text::first-letter {
+      font-size: 64px;
+      color: hsl(200, 70%, 42%);
+      font-weight: bold;
+      float: left;
+      line-height: 0.9;
+      padding-right: 8px;
+    }
+
+    .author {
+      margin-top: 25px;
+      text-align: right;
+      font-family: Arial, sans-serif;
+      font-size: 22px;
+      font-weight: bold;
+      color: hsl(0, 0%, 55%);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="quote-box">
+    <p class="quote-text">
+      Đột phá không đến từ việc cố gắng tạo ra thứ gì đó lớn lao,
+      mà từ việc liên tục giải quyết các vấn đề nhỏ nhất xung quanh cuộc sống
+      của bạn. Khii bạn tập trung xây dựng sản phẩm mang lại giá trị thực sự
+      cho người dùng, những điều vĩ đại sẽ tự nhiên theo sau.
+    </p>
+
+    <p class="author">- Tỷ phú công nghhệ -</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bảng giá dịch vụ</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f3f6f8;
+      color: #2d3a45;
+      padding: 3rem;
+    }
+
+    .pricing-section {
+      max-width: 78rem;
+      margin: 0 auto;
+      background: #eef2f4;
+      padding: 3rem 2.5rem;
+    }
+
+    .pricing-list {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .pricing-card {
+      width: 21rem;
+      min-height: 26rem;
+      background: #ffffff;
+      border: 0.125rem solid #d9dee2;
+      border-radius: 0.5rem;
+      padding: 2rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .plan-name {
+      font-size: 1.5rem;
+      font-weight: 400;
+      margin-bottom: 1.25rem;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .price {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 2rem;
+      color: #263746;
+    }
+
+    .price span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #697785;
+    }
+
+    .features {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .features li {
+      font-size: 1rem;
+      color: #606f7b;
+      padding: 0.8rem 0;
+      border-bottom: 0.0625rem solid #edf0f2;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.85rem 1.8rem;
+      background: #2f9cdb;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      transition: background 0.3s ease;
+    }
+
+    .btn:hover {
+      background: #1f7fb5;
+    }
+
+    .pricing-card:nth-child(2) {
+      background: #e3f3ff;
+      border-color: #1f84c6;
+      transform: scale(1.05);
+      box-shadow: 0 0.8rem 1.5rem rgba(0, 0, 0, 0.1);
+    }
+
+    .pricing-card:nth-child(2) .plan-name {
+      color: #1475bd;
+      font-weight: 700;
+      font-size: 1.7rem;
+    }
+
+    .pricing-card:hover {
+      border-color: #f28c28;
+      transform: translateY(-0.5rem);
+      box-shadow: 0 1rem 1.8rem rgba(0, 0, 0, 0.12);
+    }
+
+    .pricing-card:hover .plan-name {
+      font-weight: 800;
+      color: #f28c28;
+    }
+
+    .pricing-card:nth-child(2):hover {
+      transform: scale(1.05) translateY(-0.5rem);
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="pricing-section">
+    <div class="pricing-list">
+
+      <div class="pricing-card">
+        <h2 class="plan-name">Gói Cơ Bản</h2>
+        <p class="price">199.000đ<span>/tháng</span></p>
+
+        <ul class="features">
+          <li>1 Tài khoản người dùng</li>
+          <li>Hỗ trợ qua thư điện tử</li>
+          <li>5GB Dung lượng lưu trữ</li>
+        </ul>
+
+        <a href="#" class="btn">Chọn gói này</a>
+      </div>
+
+      <div class="pricing-card">
+        <h2 class="plan-name">Gói Chuyên Nghiệp</h2>
+        <p class="price">499.000dd/<span>/tháng</span></p>
+
+        <ul class="features">
+          <li>5 Tài khoản người dùng</li>
+          <li>Hỗ trợ ưu tiên 24/7</li>
+          <li>50GB Dung lượng lưu trữ</li>
+        </ul>
+
+        <a href="#" class="btn">Chọn gói này</a>
+      </div>
+
+      <div class="pricing-card">
+        <h2 class="plan-name">Gói Doanh Nghiệp</h2>
+        <p class="price">999.000đ<span>/tháng</span></p>
+
+        <ul class="features">
+          <li>Không giới hạn tài khoản</li>
+          <li>Hỗ trợ kỹ thuật riêng</li>
+          <li>Không giới hạn dung lượng</li>
+        </ul>
+
+        <a href="test/trang/kahc" class="btn">Chọn gói này</a>
+      </div>
+
+    </div>
+  </section>
+
+</body>
+</html>

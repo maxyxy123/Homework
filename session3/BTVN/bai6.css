@@ -1,0 +1,22 @@
+.promo{
+    width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+
+   
+    background: #f3eddc url("coffee-beans.png") no-repeat top right;
+
+    border: 2px solid #d97706;
+    border-radius: 20px;
+}
+
+.promo h2{
+    text-align: center;
+    color: #d97706;
+    margin-bottom: 20px;
+}
+
+.promo p{
+    text-align: justify;
+    line-height: 1.8;
+}

@@ -1,0 +1,24 @@
+.course-group{
+    width: 700px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+h1 + p{
+    font-style: italic;
+    letter-spacing: 2px;
+    color: #666;
+}
+
+
+.courses > li{
+    color: #d85c52;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+
+.courses a{
+    text-decoration: none;
+}
