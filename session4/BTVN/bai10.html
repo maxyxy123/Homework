@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main {
+        border: 1px solid red;
+        padding: min(2vh, 4%);
+        width: 100%;
+      }
+
+      #title,
+      #content,
+      #text {
+        margin-bottom: 1rem;
+      }
+      #title {
+        font-weight: bold;
+        color: rgb(39, 105, 212);
+        font-size: 3rem;
+      }
+      #content,
+      #text {
+        color: rgb(69, 67, 67);
+        font-size: 1.5rem;
+      }
+      img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+      }
+
+      @media screen and (min-width: 768px) {
+        #main::after {
+          content: "";
+          display: block;
+          clear: both;
+        }
+
+        #img-container {
+          float: left;
+          width: 40%;
+          border: 1px solid green;
+        }
+
+        #text-container {
+          float: right;
+          width: 60%;
+        }
+
+        img {
+          width: 100%;
+          height: auto; /* ❗ bỏ height cố định */
+          object-fit: cover;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="main">
+      <div id="img-container">
+        <img src="./anh-mo-ta.jpg" alt="anh-mo-ta" />
+      </div>
+
+      <div id="text-container">
+        <div id="title">Giới thiệu cửa hàng</div>
+        <div id="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde iste
+          repudiandae quis qui exercitationem eligendi facere deserunt voluptate
+          dignissimos minus nostrum dolor consequatur nihil debitis recusandae,
+          ipsam pariatur dolorem distinctio.
+        </div>
+        <div id="text">
+          Hãy cùng khám phá các sản phẩm tuyệt vời của cửa hàng trăm thương hiệu
+          được trưng bày tại Techstore
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main {
+        text-align: center;
+        font-size: 0;
+        border: 1px solid red;
+      }
+
+      .title {
+        font-weight: bold;
+        margin-bottom: 12px;
+        text-align: center;
+      }
+
+      .box {
+        display: inline-block;
+        width: 33.33%;
+        font-size: 16px;
+        border: 1px solid blue;
+        padding: 16px;
+      }
+      #name,
+      #content,
+      #price,
+      button {
+        margin-top: 1rem;
+      }
+      #name {
+        font-weight: bold;
+      }
+      #content {
+        font-size: 15px;
+        color: rgb(132, 132, 132);
+      }
+
+      #price {
+        color: rgb(232, 93, 6);
+        font-weight: bold;
+      }
+      button {
+        background-color: rgb(46, 46, 231);
+        color: white;
+        padding: min(2vh, 4%);
+        border: none;
+        border-radius: 6px;
+      }
+
+      @media screen and (max-width: 768px) {
+        #main {
+          width: 90%;
+          margin: 0 auto;
+        }
+        .box {
+          display: block;
+          border: 1px solid red;
+          margin: auto;
+          margin-bottom: 1rem;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="title">Danh mục Sản phẩm nổii bật</div>
+    <div id="main">
+      <div class="box">
+        <div id="name">Laptop Gaming cao cấp</div>
+        <div id="content">
+          Hiệu năng vượt trội,màn hình 144hz cho trải nghiệm chơi game mượt mà
+        </div>
+        <div id="price">25.000.000 VNĐ</div>
+        <button>Mua ngay</button>
+      </div>
+      <div class="box">
+        <div id="name">Điện thoại chụp ảnh khủng</div>
+        <div id="content">Camera 108mp, pin trâu 5000mAh,sạc nhanh 65W</div>
+        <div id="price">12.500.000 VNĐ</div>
+        <button>Mua ngay</button>
+      </div>
+      <div class="box">
+        <div id="name">Tai nghe chống ồn chủ động</div>
+        <div id="content">
+          cách âm tuyệt đối, âm thanh vòm 360 độ, nghe nhạc cực đã
+        </div>
+        <div id="price">4.200.000 VNĐ</div>
+        <button>Mua ngay</button>
+      </div>
+    </div>
+  </body>
+</html>
