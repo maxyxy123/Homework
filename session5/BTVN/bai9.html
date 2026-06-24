@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .main-container {
+        display: flex;
+        align-items: center;
+        border-radius: 10px;
+        margin-top: 2rem;
+      }
+
+      .text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        padding: min(6vh, 8%);
+        height: 100%;
+        width: 50%;
+        gap: 1rem;
+      }
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: min(6vh, 8%);
+        gap: 1rem;
+        background-color: blue;
+        color: white;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        width: 50%;
+        height: 100%;
+      }
+      .title {
+        font-weight: bold;
+        color: white;
+        font-size: 1.6rem;
+      }
+      #hospital {
+        font-size: 1.7rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      .input-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+      }
+      input,
+      select {
+        padding: min(1vh, 3%);
+      }
+      button {
+        padding: min(2vh, 4%);
+        background-color: green;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+      }
+      .lable {
+        font-weight: bold;
+      }
+
+      @media screen and (max-width: 768px) {
+        .main-container {
+          flex-direction: column;
+          width: 100%;
+        }
+
+        .text {
+          order: 2;
+          /* border: 1px solid red; */
+          width: 100%;
+        }
+        .text-container {
+          /* border: 1px solid red; */
+          width: 100%;
+        }
+         #hospital{
+          text-align: center;
+         }
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="text">
+        <div class="title">Nha Khoa Smile Care</div>
+        <div>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor, enim
+          nisi aliquid voluptatibus provident nostrum eveniet fuga aspernatur
+          optio incidunt, expedita tempore iusto deserunt velit. Vero officia
+          eveniet voluptas possimus!
+        </div>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus
+          iste totam quae, tempora animi porro recusandae repudiandae
+          exercitationem mollitia fuga eveniet dicta eligendi cum, dolorem
+          aperiam aliquid quas et asperiores.
+        </div>
+      </div>
+      <div class="text-container">
+        <div id="hospital">Đặt lịch khám ngay</div>
+        <div class="input-container">
+          <div class="lable">Họ và Tên</div>
+          <input type="text" placeholder="Nhập tên của bạn" />
+          <div class="lable">Số điện thoại</div>
+          <input type="text" placeholder="Nhập số điện thoại cần liên hệ" />
+          <div class="lable">Dịch vụ cần tư vấn</div>
+          <select>
+            <option value="">Khám tổng quát và lấy cao răng</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <button>Xác nhận đặt lịch</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

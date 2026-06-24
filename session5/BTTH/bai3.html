@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+      *{
+            margin : 0;
+            padding : 0;
+            box-sizing: border-box;
+        }
+        .menu{
+          text-align: center;
+          color: rgb(29, 29, 29);
+          border: 1px solid blue;
+          
+        }
+        #main {
+          display:flex ;
+          /* justify-content: center; */
+          align-items: center;
+          gap: 2rem;
+          flex-wrap: wrap;
+          padding: min(2vh,4%);
+        }
+        .container{
+          border: 1px solid red;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1rem;
+          width: 200px;
+          border-radius: 10px;
+        
+        }
+        img{
+          width: 100%;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        }
+        #name{
+          font-weight: bold;
+        }
+        #price {
+          margin-bottom: 1rem;
+          font-weight: bold;
+          color: orangered;
+        }
+  </style>
+</head>
+<body>
+  <div class="menu">Thực đơn cảu chúng tôi</div>
+  <div id="main">
+    <div class="container">
+      <img src="./anh-mo-ta.jpg" alt="anh-mo-ta">
+      <div id="name">Salad Rau củ tươi</div>
+      <div id="price">45.000 VNĐ</div>
+    </div>
+    <div class="container">
+      <img src="./anh-mo-ta.jpg" alt="anh-mo-ta">
+      <div id="name">Cơm gạo lức bổ dưỡng</div>
+      <div id="price">100.000 VNĐ</div>
+    </div>
+    <div class="container">
+      <img src="./anh-mo-ta.jpg" alt="anh-mo-ta">
+      <div id="name">Pizza hải sản phô mai</div>
+      <div id="price">120.000 VNĐ</div>
+    </div>
+    <div class="container">
+      <img src="./anh-mo-ta.jpg" alt="anh-mo-ta">
+      <div id="name">Hamburger bò Úc</div>
+      <div id="price">85.000 VNĐ</div>
+    </div>
+    <div class="container">
+      <img src="./anh-mo-ta.jpg" alt="anh-mo-ta">
+      <div id="name">Sườn nướng BBQ</div>
+      <div id="price">150.000 VNĐ</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid blue;
+        height: 40vh;
+        width: 100vw;
+        gap: 2rem;
+      }
+      .card {
+        border: 1px solid rgb(164, 158, 158);
+        padding: min(4vh, 6%);
+        min-width: 190px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        border-radius: 5px;
+      }
+
+      #bundle,
+      #type {
+        align-self: center;
+      }
+      #bundle {
+        font-weight: bold;
+        color: black;
+      }
+      #type {
+        font-weight: bold;
+        color: rgb(29, 100, 123);
+        font-size: 1.4rem;
+      }
+      #content {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        gap: 5px;
+      }
+      button {
+        padding: min(2vh, 6%);
+        border: none;
+        border-radius: 5px;
+        background-color: darkslateblue;
+        color: white;
+        font-weight: bold;
+      }
+
+      .special {
+        align-self: start;
+        background-color: rgb(123, 123, 226);
+        color: white;
+      }
+      .price{
+        color: white;
+        align-self: center;
+        font-weight: bold;
+        font-size: 1.8rem;
+      }
+     
+    </style>
+  </head>
+  <body>
+    <main id="main">
+      <div class="card">
+        <div id="bundle">Cơ bản</div>
+        <div id="type">Miễn phí</div>
+        <div id="content">
+          <div>1 Dự án</div>
+          <div>100mb lưu trữ</div>
+          <div>Hỗ trợ email</div>
+        </div>
+        <button>Bắt đầu ngay</button>
+      </div>
+      <div class="card special">
+        <div id="bundle">Chuyên nghiệp</div>
+        <div class="price" >99.000đ/th</div>
+        <div id="content">
+          <div>1 Dự án</div>
+          <div>10gb điều chỉnh</div>
+           <div>Hộ trợ 24/7</div>
+          <div>Domain tùy chỉnh</div>
+        </div>
+        <button>Bắt đầu ngay</button>
+      </div>
+      <div class="card">
+        <div id="bundle">Doanh nghiệp</div>
+        <div id="type">Liên hệ</div>
+        <div id="content">
+          <div>1 Dự án</div>
+          <div>100mb lưu trữ</div>
+          <div>Hỗ trợ email</div>
+        </div>
+        <button>Bắt đầu ngay</button>
+      </div>
+    </main>
+  </body>
+</html>
