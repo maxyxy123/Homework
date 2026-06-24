@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .product-box{
+        display: inline-block;
+        border: 1px solid red;
+        height: 20vh;
+        width: 20vw;
+        margin-right: 2rem;
+        margin-top: 5rem;
+        text-align: center;
+      }
+      .none{
+        display: none;
+      }
+      .hidden{
+        visibility: hidden;
+      }
+</style>
+<body>
+    <div class="product-row">
+  <div class="product-box">Sản phẩm 1</div>
+  <div class="product-box none">Sản phẩm 2</div>
+  <div class="product-box">Sản phẩm 3</div>
+</div>
+
+<div class="product-row">
+  <div class="product-box">Sản phẩm 4</div>
+  <div class="product-box hidden">Sản phẩm 5</div>
+  <div class="product-box">Sản phẩm 6</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-color: rgb(210, 209, 206);
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #main {
+        width: 460px;
+        height: fit-content;
+        border: 1px solid;
+        border-radius: 7px;
+        background-color: white;
+        margin: auto;
+        margin-top: 10rem;
+        padding: min(4vh, 8%);
+      }
+      #title,
+      #content,
+      #email {
+        margin-bottom: 1rem;
+      }
+
+      #title {
+        text-align: center;
+        color: rgb(226, 117, 9);
+        font-weight: bold;
+      }
+
+      #content {
+        color: rgb(115, 112, 112);
+        text-align: center;
+      }
+
+      #input-container{
+        text-align: center;
+      }
+      #email {
+        height: 2rem;
+        width: 14rem;
+        border-radius: 5px;
+        border: 0.7px solid lightgray;
+      }
+      button{
+        padding: min(2vh, 2%);
+         border: none;
+         background-color: rgb(99, 99, 217);
+         color:white ;
+         font-weight: bold;
+         border-radius: 5px;
+         margin-left: 1rem;
+         cursor: pointer;
+      }
+      #email::placeholder {
+        padding: min(2vh, 2%);
+       
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div id="title">Đăng ký nhận khuyến mãi!</div>
+      <div id="content">
+        Nhập email của bạn để ko bỏ lỡ nhg deal "Siu Sale công nghệ" mới nhất từ
+        chúng mình
+      </div>
+      <div id="input-container">
+        <input id="email" type="email" placeholder="Nhập địa chỉ email..." />
+        <button>Đăng ký ngay</button>
+      </div>
+    </div>
+  </body>
+</html>
