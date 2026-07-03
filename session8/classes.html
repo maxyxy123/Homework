@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lịch học - FitLife</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="bg-slate-950 text-white">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-slate-950/90 border-b border-slate-800">
+      <div
+        class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between"
+      >
+        <a href="index.html" class="text-2xl font-bold">
+          <span class="text-orange-500">Fit</span>Life
+        </a>
+
+        <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+          <a href="index.html" class="hover:text-orange-500">Home</a>
+          <a href="classes.html" class="text-orange-500">Classes</a>
+          <a href="contact.html" class="hover:text-orange-500">Contact</a>
+        </nav>
+
+        <a
+          href="contact.html"
+          class="hidden md:inline-block bg-orange-500 hover:bg-orange-600 px-5 py-2 rounded font-semibold"
+        >
+          Join Now
+        </a>
+
+        <div class="md:hidden text-2xl">☰</div>
+      </div>
+    </header>
+
+    <!-- Page title -->
+    <section class="bg-slate-900 py-16">
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <h1 class="text-4xl md:text-5xl font-extrabold">Classes & Schedule</h1>
+        <p class="text-slate-400 mt-4">
+          Khám phá các bộ môn và lịch học tại FitLife.
+        </p>
+      </div>
+    </section>
+
+    <!-- Classes -->
+    <section class="max-w-7xl mx-auto px-4 py-16">
+      <h2 class="text-3xl font-bold mb-8">Các bộ môn</h2>
+
+      <!-- card -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div
+          class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden"
+        >
+          <img
+            src="assets/images/yoga.jpg"
+            alt="Yoga"  
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Yoga</h3>
+            <p class="text-slate-400 mt-2">
+              Cải thiện sự linh hoạt, giảm căng thẳng và cân bằng cơ thể.
+            </p>
+            <p class="text-orange-500 mt-3 font-semibold">Level: All levels</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden"
+        >
+          <img
+            src="assets/images/pilates.jpg"
+            alt="Pilates"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Pilates</h3>
+            <p class="text-slate-400 mt-2">
+              Tăng cường sức mạnh cơ lõi, cải thiện tư thế và sự dẻo dai.
+            </p>
+            <p class="text-orange-500 mt-3 font-semibold">Level: All levels</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden"
+        >
+          <img
+            src="assets/images/gym-class.jpg"
+            alt="Gym"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Gym</h3>
+            <p class="text-slate-400 mt-2">
+              Rèn luyện sức mạnh, phát triển cơ bắp và tăng cường thể lực.
+            </p>
+            <p class="text-orange-500 mt-3 font-semibold">Level: Beginner</p>
+          </div>
+        </div>
+
+        <div
+          class="bg-slate-900 border border-slate-800 rounded-xl overflow-hidden"
+        >
+          <img
+            src="assets/images/zumba.jpg"
+            alt="Zumba"
+            class="w-full h-44 object-cover"
+          />
+          <div class="p-5">
+            <h3 class="text-xl font-bold">Zumba</h3>
+            <p class="text-slate-400 mt-2">
+              Những bài nhảy sôi động giúp đốt cháy calo và tăng năng lượng.
+            </p>
+            <p class="text-orange-500 mt-3 font-semibold">Level: Beginner</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule -->
+    <section class="max-w-7xl mx-auto px-4 pb-16">
+      <h2 class="text-3xl font-bold mb-8">Thời gian biểu</h2>
+
+      <div
+        class="overflow-x-auto bg-slate-900 border border-slate-800 rounded-xl"
+      >
+        <table class="w-full min-w-[700px] text-left">
+          <thead class="bg-slate-800">
+            <tr>
+              <th class="p-4">Thứ</th>
+              <th class="p-4">Môn học</th>
+              <th class="p-4">Thời gian</th>
+              <th class="p-4">Huấn luyện viên</th>
+              <th class="p-4">Phòng tập</th>
+            </tr>
+          </thead>
+
+          <tbody class="divide-y divide-slate-800 text-slate-300">
+            <tr>
+              <td class="p-4">Thứ 2</td>
+              <td class="p-4">Yoga</td>
+              <td class="p-4">18:00 - 19:00</td>
+              <td class="p-4">Coach Linh</td>
+              <td class="p-4">Studio 1</td>
+            </tr>
+
+            <tr>
+              <td class="p-4">Thứ 3</td>
+              <td class="p-4">Zumba</td>
+              <td class="p-4">19:00 - 20:00</td>
+              <td class="p-4">Coach An</td>
+              <td class="p-4">Studio 2</td>
+            </tr>
+
+            <tr>
+              <td class="p-4">Thứ 4</td>
+              <td class="p-4">Pilates</td>
+              <td class="p-4">18:30 - 19:30</td>
+              <td class="p-4">Coach Mai</td>
+              <td class="p-4">Studio 1</td>
+            </tr>
+
+            <tr>
+              <td class="p-4">Thứ 5</td>
+              <td class="p-4">Gym Basic</td>
+              <td class="p-4">17:30 - 18:30</td>
+              <td class="p-4">Coach Nam</td>
+              <td class="p-4">Gym Floor</td>
+            </tr>
+
+            <tr>
+              <td class="p-4">Thứ 6</td>
+              <td class="p-4">Yoga</td>
+              <td class="p-4">18:00 - 19:00</td>
+              <td class="p-4">Coach Linh</td>
+              <td class="p-4">Studio 1</td>
+            </tr>
+
+            <tr>
+              <td class="p-4">Thứ 7</td>
+              <td class="p-4">Zumba</td>
+              <td class="p-4">09:00 - 10:00</td>
+              <td class="p-4">Coach An</td>
+              <td class="p-4">Studio 2</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Trainers -->
+    <section class="max-w-7xl mx-auto px-4 pb-16">
+      <h2 class="text-3xl font-bold mb-8">Đội ngũ huấn luyện viên</h2>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+          <img
+            src="assets/images/trainer-1.jpg"
+            alt="Coach Linh"
+            class="w-24 h-24 rounded-full object-cover mb-4"
+          />
+          <h3 class="text-xl font-bold">Coach Linh</h3>
+          <p class="text-orange-500 font-semibold">Yoga & Pilates Trainer</p>
+          <p class="text-slate-400 mt-3">
+            Có kinh nghiệm hướng dẫn các lớp linh hoạt, phù hợp cho người mới
+            bắt đầu.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+          <img
+            src="assets/images/trainer-2.jpg"
+            alt="Coach Nam"
+            class="w-24 h-24 rounded-full object-cover mb-4"
+          />
+          <h3 class="text-xl font-bold">Coach Nam</h3>
+          <p class="text-orange-500 font-semibold">Strength Trainer</p>
+          <p class="text-slate-400 mt-3">
+            Chuyên gia về rèn luyện sức mạnh, tăng cơ và xây dựng thể hình.
+          </p>
+        </div>
+
+        <div class="bg-slate-900 border border-slate-800 rounded-xl p-6">
+          <img
+            src="assets/images/trainer-3.jpg"
+            alt="Coach An"
+            class="w-24 h-24 rounded-full object-cover mb-4"
+          />
+          <h3 class="text-xl font-bold">Coach An</h3>
+          <p class="text-orange-500 font-semibold">Zumba Instructor</p>
+          <p class="text-slate-400 mt-3">
+            Mang đến những buổi nhảy sôi động, truyền lửa và đầy năng lượng.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 border-t border-slate-800">
+      <div class="max-w-7xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-6">
+        <div>
+          <h3 class="text-2xl font-bold">
+            <span class="text-orange-500">Fit</span>Life
+          </h3>
+          <p class="text-slate-400 mt-2">Premium Fitness Club</p>
+        </div>
+
+        <div class="text-slate-400">
+          <p>Địa chỉ: 123 Nguyễn Trãi, Quận 1, TP.HCM</p>
+          <p>Hotline: 0900 123 456</p>
+          <p>Email: support@fitlife.vn</p>
+        </div>
+
+        <div class="md:text-right">
+          <p class="font-semibold mb-2">Kết nối với chúng tôi</p>
+          <div class="flex md:justify-end gap-4 text-2xl">
+            <span>Tiktok</span>
+            <span>Instagram</span>
+            <span>Facebook</span>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="text-center text-slate-500 text-sm border-t border-slate-800 py-4"
+      >
+        © 2026 FitLife Premium Fitness Club. All rights reserved.
+      </div>
+    </footer>
+  </body>
+</html>
