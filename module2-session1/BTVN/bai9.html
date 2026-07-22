@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+const ADMIN_USER = "admin";
+const ADMIN_PASS = "123456";
+
+
+const user = prompt("Nhập tên đăng nhập:");
+const pass = prompt("Nhập mật khẩu:");
+
+
+if (user === null || pass === null) {
+  alert("Bạn đã hủy đăng nhập.");
+} else {
+
+  const normalizedUser = user.trim();
+
+  if (normalizedUser === ADMIN_USER && pass === ADMIN_PASS) {
+    alert("Đăng nhập thành công!");
+  } else {
+    alert("Sai tên đăng nhập hoặc mật khẩu!");
+  }
+}
+      
+
+    </script>
+</body>
+</html>

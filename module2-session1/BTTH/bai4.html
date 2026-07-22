@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let x = 10;
+
+      console.log("Ngoài block trước:", x);
+
+      {
+        let x = 20;
+        console.log("Trong block:", x);
+      }
+
+      console.log("Ngoài block sau:", x);
+
+      const myUniversity = "FPT University";
+
+      console.log("Giá trị ban đầu:", myUniversity);
+
+      try {
+        myUniversity = "Đại học khác";
+      } catch (error) {
+        console.log("Lỗi khi thay đổi const:", error.message);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+   const a = Number(prompt("Nhập số A:"));
+const phepTinh = prompt("Nhập phép tính (+, -, *, /):");
+const b = Number(prompt("Nhập số B:"));
+
+let ketQua;
+
+if (isNaN(a) || isNaN(b)) {
+  alert("Vui lòng nhập A và B là số hợp lệ.");
+} else {
+  switch (phepTinh) {
+    case "+":
+      ketQua = a + b;
+      break;
+
+    case "-":
+      ketQua = a - b;
+      break;
+
+    case "*":
+      ketQua = a * b;
+      break;
+
+    case "/":
+      if (b === 0) {
+        alert("Không thể chia cho 0.");
+      } else {
+        ketQua = a / b;
+      }
+      break;
+
+    default:
+      alert("Phép tính không hợp lệ. Chỉ nhập +, -, *, /.");
+  }
+
+  if (ketQua !== undefined) {
+    alert(`Kết quả của ${a} ${phepTinh} ${b} là: ${ketQua}`);
+    console.log(`Kết quả của ${a} ${phepTinh} ${b} là: ${ketQua}`);
+  }
+}
+    </script>
+</body>
+</html>

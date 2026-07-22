@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+       console.log(message);
+       var message = "Hello"
+
+       console.log(message)
+function showMessage() {
+  var localMessage = "Biến này nằm bên trong hàm";
+
+  console.log(localMessage);
+}
+
+showMessage();
+
+console.log(localMessage);
+
+// bien localmessage dc tao trong ham showMessage() nen chi co the su dung trog ham , khi truy cap ben ngoai thi se loi referenceError
+    </script>
+  </body>
+</html>

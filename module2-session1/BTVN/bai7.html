@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+ function kiemTraDuThi(chuyenCan, diemTrungBinh, coGiayPhepDacBiet) {
+    const duDieuKienThongThuong =
+        chuyenCan > 80 && diemTrungBinh >= 5;
+
+    const duocDuThi =
+        duDieuKienThongThuong || coGiayPhepDacBiet;
+
+    if (duocDuThi) {
+        return "Sinh viên được dự thi";
+    }
+
+    return "Sinh viên không được dự thi";
+}
+
+
+const chuyenCan = 75;
+const diemTrungBinh = 4.5;
+const coGiayPhepDacBiet = true;
+
+const ketQua = kiemTraDuThi(
+    chuyenCan,
+    diemTrungBinh,
+    coGiayPhepDacBiet
+);
+
+console.log(ketQua);
+    </script>
+  </body>
+</html>
