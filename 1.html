@@ -1,11 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <script src="./1.js"></script>
-</body>
+  </head>
+  <body>
+    <h1 id="qwe">hello</h1>
+    <button id="toggleBtn">CHuyen che do sang toi</button>
+
+    <script>
+      const toggleBtn = document.body;
+      const btn = document.getElementById("toggleBtn");
+
+      btn.addEventListener("click", () => {
+        if (toggleBtn.style.backgroundColor === "white") {
+          toggleBtn.style.backgroundColor = "black";
+        } else {
+          toggleBtn.style.backgroundColor = "white";
+        }
+      });
+    </script>
+  </body>
 </html>

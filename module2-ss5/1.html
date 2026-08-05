@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            padding: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #1a252f;
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 8px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            border: 1px solid #e1e4e8;
+        }
+
+        .card h2 {
+            font-size: 1.15rem;
+            color: #2c3e50;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 6px;
+            display: inline-block;
+        }
+
+        .card p.desc {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-bottom: 15px;
+        }
+
+        input[type="text"], input[type="email"] {
+            padding: 8px 12px;
+            font-size: 14px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            outline: none;
+            margin-right: 8px;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            border-color: #007bff;
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.2s;
+            margin-right: 5px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        button.btn-danger {
+            background-color: #dc3545;
+        }
+
+        button.btn-danger:hover {
+            background-color: #bd2130;
+        }
+
+        ul {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        ul li {
+            padding: 8px 12px;
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            margin-bottom: 6px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .parent-box {
+            background-color: #e9ecef;
+            padding: 25px;
+            border-radius: 6px;
+            border: 2px dashed #adb5bd;
+            text-align: center;
+            cursor: pointer;
+            font-weight: bold;
+            color: #495057;
+        }
+
+        .output-text {
+            margin-top: 10px;
+            font-size: 0.95rem;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #d63384;
+        }
+
+        .log-box {
+            background: #212529;
+            color: #00ff66;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-top: 10px;
+            min-height: 24px;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Thực Hành JavaScript DOM & Event Listener</h1>
+
+        <div class="card">
+            <h2>Bài 1: Lắng nghe sự kiện bàn phím (keydown)</h2>
+            <p class="desc">Mô tả: Nhập vào ô bên dưới và quan sát phím vừa được nhấn.</p>
+            <input type="text" id="user-input" placeholder="Nhập phím bất kỳ...">
+            <p class="output-text">Phím vừa nhấn: <span id="key-display" class="highlight">Chưa nhấn</span></p>
+        </div>
+
+        <!-- Bài 2 -->
+        <div class="card">
+            <h2>Bài 2: Tạo và xóa phần tử DOM</h2>
+            <p class="desc">Mô tả: Sử dụng createElement, appendChild và remove.</p>
+            <div>
+                <button id="btn-add">Add Item</button>
+                <button id="btn-remove" class="btn-danger">Remove Last</button>
+            </div>
+            <ul id="item-list"></ul>
+        </div>
+
+
+        <div class="card">
+            <h2>Bài 3: Xử lý Form & e.preventDefault()</h2>
+            <p class="desc">Mô tả: Nhập thông tin và Submit (Mở Console F12 để xem Object dữ liệu).</p>
+            <form id="register-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <button type="submit">Submit Form</button>
+            </form>
+            <div id="form-log" class="log-box">Chưa có dữ liệu submit...</div>
+        </div>
+
+        <div class="card">
+            <h2>Bài 4: Di chuyển node với parentElement</h2>
+            <p class="desc">Mô tả: Click nút "Xóa" để xóa chính dòng chứa nút đó.</p>
+            <ul id="delete-list">
+                <li><span>Sản phẩm 1</span> <button class="btn-delete btn-danger">Xóa</button></li>
+                <li><span>Sản phẩm 2</span> <button class="btn-delete btn-danger">Xóa</button></li>
+                <li><span>Sản phẩm 3</span> <button class="btn-delete btn-danger">Xóa</button></li>
+                <li><span>Sản phẩm 4</span> <button class="btn-delete btn-danger">Xóa</button></li>
+                <li><span>Sản phẩm 5</span> <button class="btn-delete btn-danger">Xóa</button></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Bài 5: Chống nổi bọt sự kiện (e.stopPropagation)</h2>
+            <p class="desc">Mô tả: Click vào vùng xám (Parent) hoặc Click nút bên trong (Child). Xem log bên dưới & Console.</p>
+            <div id="parent-box" class="parent-box">
+                PARENT BOX (Thẻ Div Cha)
+                <br><br>
+                <button id="child-btn">CHILD BUTTON (Nút Con)</button>
+            </div>
+            <div id="event-log" class="log-box">Log sự kiện sẽ hiển thị ở đây...</div>
+        </div>
+
+        <div class="card">
+            <h2>Bài 6: Đổi màu nền ngẫu nhiên</h2>
+            <p class="desc">Mô tả: Click nút để chọn màu ngẫu nhiên từ mảng colors = ["red", "blue", "green", "yellow", "purple"].</p>
+            <button id="btn-change-color">Change Background</button>
+            <p class="output-text">Mã màu đang áp dụng: <span id="color-code" class="highlight">Gốc (#f4f6f9)</span></p>
+        </div>
+    </div>
+
+
+    <script src="1.js"></script>
+</body>
+</html>
