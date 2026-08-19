@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Wallet - Quản lý chi tiêu cá nhân</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <div class="app-container">
+    <header class="app-header">
+      <h1> Quản Lý Chi Tiêu Cá Nhân</h1>
+      <div class="month-selector">
+        <label for="month-picker"><strong>Tháng làm việc:</strong></label>
+        <input type="month" id="month-picker" />
+      </div>
+    </header>
+
+    <div id="alerts-container"></div>
+
+    <section class="dashboard">
+      <div class="card">
+        <h3>Số dư hiện tại (Realtime)</h3>
+        <p id="total-balance" class="amount">0 ₫</p>
+      </div>
+      <div class="card">
+        <h3>Tổng thu nhập tháng</h3>
+        <p id="total-income" class="amount positive">+0 ₫</p>
+      </div>
+      <div class="card">
+        <h3>Tổng chi tiêu tháng</h3>
+        <p id="total-expense" class="amount negative">-0 ₫</p>
+      </div>
+      <div class="card">
+        <h3>Ngân sách tổng tháng</h3>
+        <div class="progress-container">
+          <div id="budget-progress-bar" class="progress-bar"></div>
+        </div>
+        <p id="budget-status">Đang tính toán...</p>
+      </div>
+    </section>
+
+    <main class="main-layout">
+      <div class="layout-column">
+        <section class="panel">
+          <h2>Thêm Giao Dịch</h2>
+          <form id="transaction-form">
+            <div class="form-group">
+              <label>Loại giao dịch:</label>
+              <div class="radio-group">
+                <label><input type="radio" name="type" value="expense" checked /> Chi tiêu (-)</label>
+                <label><input type="radio" name="type" value="income" /> Thu nhập (+)</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="trans-amount">Số tiền (VNĐ)</label>
+              <input type="number" id="trans-amount" placeholder="VD: 100000" min="1" required />
+            </div>
+            <div class="form-group">
+              <label for="trans-category">Danh mục</label>
+              <select id="trans-category" required></select>
+            </div>
+            <div class="form-group">
+              <label for="trans-date">Ngày thực hiện</label>
+              <input type="date" id="trans-date" required />
+            </div>
+            <div class="form-group">
+              <label for="trans-note">Ghi chú</label>
+              <input type="text" id="trans-note" placeholder="VD: Bữa sáng" />
+            </div>
+            <button type="submit" class="btn btn-primary">Thêm Giao Dịch</button>
+          </form>
+        </section>
+
+        <section class="panel">
+          <h2>Quản Lý Danh Mục</h2>
+          <form id="category-form">
+            <input type="hidden" id="cat-id" />
+            <div class="form-group">
+              <label for="cat-name">Tên danh mục</label>
+              <input type="text" id="cat-name" placeholder="VD: Mua sắm" required />
+            </div>
+            <div class="form-group">
+              <label for="cat-limit">Hạn mức chi tiêu tháng (0 = Không đặt)</label>
+              <input type="number" id="cat-limit" placeholder="VD: 2000000" min="0" required />
+            </div>
+            <div class="button-group">
+              <button type="submit" id="cat-submit-btn" class="btn btn-secondary">Thêm Danh Mục</button>
+              <button type="button" id="cat-cancel-btn" class="btn btn-light" style="display: none;">Hủy</button>
+            </div>
+          </form>
+
+          <h3>Danh sách danh mục & Hạn mức</h3>
+          <ul id="category-list" class="category-list"></ul>
+        </section>
+      </div>
+
+      <div class="layout-column">
+        <section class="panel">
+          <h2>Lịch Sử Giao Dịch</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Ngày</th>
+                  <th>Danh mục</th>
+                  <th>Ghi chú</th>
+                  <th>Số tiền</th>
+                  <th>Hành động</th>
+                </tr>
+              </thead>
+              <tbody id="transaction-history"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Tổng Hợp Chi Tiêu Các Tháng</h2>
+          <div class="table-wrapper">
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Tháng</th>
+                  <th>Tổng thu</th>
+                  <th>Tổng chi</th>
+                  <th>Cân đối</th>
+                </tr>
+              </thead>
+              <tbody id="monthly-summary"></tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="src/app.ts"></script>
+</body>
+</html>
