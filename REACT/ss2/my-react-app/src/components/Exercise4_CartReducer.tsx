@@ -26,7 +26,7 @@ const initialState: CartState = {
 function cartReducer(state: CartState, action: CartAction): CartState {
   switch (action.type) {
     case 'ADD_COURSE': {
-      // Bẫy dữ liệu: Từ chối nếu khóa học đã có trong giỏ
+   
       const exists = state.items.some((item) => item.id === action.payload.id);
       if (exists) return state;
       return { ...state, items: [...state.items, action.payload] };

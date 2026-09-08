@@ -10,7 +10,7 @@ export default function CourseSearch() {
     if (value.trim() !== '') {
       setSearchParams({ search: value });
     } else {
-      // Bẫy dữ liệu: Xóa sạch query string khi input rỗng
+    
       searchParams.delete('search');
       setSearchParams(searchParams);
     }

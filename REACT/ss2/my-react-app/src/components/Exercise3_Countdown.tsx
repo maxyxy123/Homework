@@ -30,14 +30,14 @@ export function useCountdown(initialSeconds: number): [number, CountdownControls
           if (prev <= 1) {
             clearInterval(timerRef.current!);
             setIsRunning(false);
-            return 0; // Dừng tại 0, không âm
+            return 0; 
           }
           return prev - 1;
         });
       }, 1000);
     }
 
-    // Cleanup memory khi unmount hoặc đổi state
+   
     return () => {
       if (timerRef.current) clearInterval(timerRef.current);
     };

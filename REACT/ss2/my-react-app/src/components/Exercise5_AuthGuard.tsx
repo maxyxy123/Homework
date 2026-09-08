@@ -6,7 +6,7 @@ interface ProtectedRouteProps {
   children: React.ReactNode;
 }
 
-// Wrapper Component bảo vệ route
+
 export const ProtectedRoute = ({ isAuthenticated, children }: ProtectedRouteProps) => {
   if (!isAuthenticated) {
     return <Navigate to="/login" replace />;
@@ -19,7 +19,6 @@ export const LoginPage = ({ onLogin }: { onLogin: () => void }) => {
 
   const handleLoginSuccess = () => {
     onLogin();
-    // Bẫy dữ liệu: dùng replace: true để xóa /login khỏi history stack
     navigate('/virtual-classroom', { replace: true });
   };
 
