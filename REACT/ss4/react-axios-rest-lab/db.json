@@ -1,0 +1,38 @@
+{
+  "contacts": [
+    {
+      "id": "1",
+      "name": "Nguyen An",
+      "phone": "0901234567",
+      "email": "an@example.com"
+    },
+    {
+      "id": "2",
+      "name": "Tran Binh",
+      "phone": "0912345678",
+      "email": "binh@example.com"
+    },
+    {
+      "name": "123123",
+      "phone": "04044",
+      "email": "qwe@gmail.com",
+      "id": "_DslHXtk2Jo"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "fullName": "Nguyen Van A",
+      "email": "vana@example.com",
+      "phone": "0901111111",
+      "dateOfBirth": "2002-05-10",
+      "gender": "male",
+      "address": "Ha Noi",
+      "department": "Engineering",
+      "position": "Frontend Developer",
+      "employeeCode": "EMP001",
+      "status": "active"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
