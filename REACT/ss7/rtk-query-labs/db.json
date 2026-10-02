@@ -1,0 +1,36 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Laptop Dell XPS",
+      "price": 32000000,
+      "liked": true
+    },
+    {
+      "id": "2",
+      "name": "Laptop Gaming ASUS",
+      "price": 28000000,
+      "liked": true
+    },
+    {
+      "id": "3",
+      "name": "Macbook Air M3",
+      "price": 29000000,
+      "liked": false
+    },
+    {
+      "id": "4",
+      "name": "Macbook Pro M4",
+      "price": 45000000,
+      "liked": false
+    },
+    {
+      "id": "5",
+      "name": "Chuột Logitech",
+      "price": 1500000,
+      "liked": false
+    }
+  ],
+  "orders": [],
+  "$schema": "./node_modules/json-server/schema.json"
+}
