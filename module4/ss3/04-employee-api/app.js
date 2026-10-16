@@ -1,0 +1,11 @@
+const express = require('express');
+const path = require('path');
+const routes = require('./routes/employeeRoutes');
+const errorHandler = require('./middlewares/errorHandler');
+const app = express();
+app.use(express.json());
+app.use((req, res, next) => { console.log(`${new Date().toISOString()} ${req.method} ${req.originalUrl}`); next(); });
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/api/employees', routes);
+app.use(errorHandler);
+module.exports = app;
