@@ -1,0 +1,12 @@
+const express = require('express');
+const path = require('path');
+const AppError = require('./utils/AppError');
+const app = express();
+app.use(express.json());
+app.use((req, res, next) => { console.log(`${req.method} ${req.originalUrl}`); next(); });
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+app.use('/api/posts', require('./routes/postRoutes'));
+app.use('/api/comments', require('./routes/commentRoutes'));
+app.use((req, res, next) => next(new AppError('Không tìm thấy đường dẫn', 404)));
+app.use(require('./middlewares/errorHandler'));
+module.exports = app;
