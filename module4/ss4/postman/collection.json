@@ -1,0 +1,177 @@
+{
+  "info": {
+    "name": "REST API - Nested Resources & HATEOAS",
+    "description": "5 requests, moi request co 2 tests. Request 03 dung status 404 theo dung ky vong.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "01 - Orders có status và limit",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/users/2/orders?status=paid&limit=3",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "2",
+            "orders"
+          ],
+          "query": [
+            {
+              "key": "status",
+              "value": "paid"
+            },
+            {
+              "key": "limit",
+              "value": "3"
+            }
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code là 200\", () => { pm.response.to.have.status(200); });",
+              "pm.test(\"Response đúng cấu trúc đã thiết kế\", () => { const json = pm.response.json(); pm.expect(json).to.have.property('success', true); pm.expect(json.data).to.be.an('array'); pm.expect(json.data.length).to.eql(2); pm.expect(json.data.every(o => o.status === 'paid' && o.userId === 2)).to.be.true; pm.expect(json.meta.total).to.eql(2); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "02 - Orders mặc định",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/users/2/orders",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "2",
+            "orders"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code là 200\", () => { pm.response.to.have.status(200); });",
+              "pm.test(\"Response đúng cấu trúc đã thiết kế\", () => { const json = pm.response.json(); pm.expect(json).to.have.property('success', true); pm.expect(json.data).to.be.an('array'); pm.expect(json.meta.total).to.eql(4); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "03 - User không tồn tại (404)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v1/users/999/orders",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v1",
+            "users",
+            "999",
+            "orders"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code là 404\", () => { pm.response.to.have.status(404); });",
+              "pm.test(\"Response đúng cấu trúc đã thiết kế\", () => { const json = pm.response.json(); pm.expect(json).to.have.property('success', false); pm.expect(json.code).to.eql('USER_NOT_FOUND'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "04 - Order pending có link cancel",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v2/orders/17",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "orders",
+            "17"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code là 200\", () => { pm.response.to.have.status(200); });",
+              "pm.test(\"Response đúng cấu trúc đã thiết kế\", () => { const json = pm.response.json(); pm.expect(json).to.have.property('success', true); pm.expect(json.data).to.have.property('status', 'pending'); pm.expect(json.data._links).to.have.property('cancel'); });"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "05 - Order cancelled không có cancel",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{base_url}}/api/v2/orders/15",
+          "host": [
+            "{{base_url}}"
+          ],
+          "path": [
+            "api",
+            "v2",
+            "orders",
+            "15"
+          ]
+        }
+      },
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              "pm.test(\"Status code là 200\", () => { pm.response.to.have.status(200); });",
+              "pm.test(\"Response đúng cấu trúc đã thiết kế\", () => { const json = pm.response.json(); pm.expect(json).to.have.property('success', true); pm.expect(json.data).to.have.property('status', 'cancelled'); pm.expect(json.data._links).not.to.have.property('cancel'); });"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}

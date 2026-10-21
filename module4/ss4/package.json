@@ -1,0 +1,16 @@
+{
+  "name": "rest-api-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bai tap REST API: nested resources, versioning, Postman, Newman va HATEOAS",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test",
+    "test:api": "newman run postman/collection.json -e postman/env.json --reporters cli,htmlextra --reporter-htmlextra-export reports/newman-report.html"
+  },
+  "devDependencies": {
+    "newman": "^6.2.1",
+    "newman-reporter-htmlextra": "^1.23.1"
+  }
+}
