@@ -1,0 +1,1 @@
+Thêm before-rollback.png và after-rollback.png sau khi thực sự test MySQL.

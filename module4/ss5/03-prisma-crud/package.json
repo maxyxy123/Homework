@@ -1,0 +1,16 @@
+{
+  "name": "prisma-crud",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "migrate": "prisma migrate dev --name init",
+    "generate": "prisma generate",
+    "start": "node main.js",
+    "studio": "prisma studio"
+  },
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "dotenv": "^16.4.7",
+    "prisma": "^6.6.0"
+  }
+}
