@@ -1,0 +1,16 @@
+{
+  "name": "knex-report",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "migrate": "knex migrate:latest",
+    "rollback": "knex migrate:rollback --all",
+    "seed": "knex seed:run",
+    "report": "node report.js"
+  },
+  "dependencies": {
+    "knex": "^3.1.0",
+    "mysql2": "^3.12.0",
+    "dotenv": "^16.4.7"
+  }
+}

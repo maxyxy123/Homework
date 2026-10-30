@@ -1,0 +1,1 @@
+Chụp ảnh Prisma Studio thật và lưu thành prisma-studio.png trong thư mục này.
