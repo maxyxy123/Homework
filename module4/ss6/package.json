@@ -1,0 +1,17 @@
+{
+  "name": "mongoose-homework",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Five Mongoose exercises: validation, operators, embedding, populate, and missing fields",
+  "type": "commonjs",
+  "scripts": {
+    "seed": "node src/seed.js",
+    "exercise:1": "node src/exercises/01-product-validation.js",
+    "exercise:2": "node src/exercises/02-logic-operators.js",
+    "exercise:3": "node src/exercises/03-embedded-store.js",
+    "exercise:4": "node src/exercises/04-order-populate.js",
+    "exercise:5": "node src/exercises/05-missing-stock.js"
+  },
+  "dependencies": { "dotenv": "^16.4.5", "mongoose": "^8.9.0" },
+  "engines": { "node": ">=18" }
+}
