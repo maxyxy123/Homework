@@ -1,0 +1,26 @@
+{
+  "name": "nestjs-six-exercises",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "nest start api",
+    "start:dev": "nest start api --watch",
+    "start:admin": "nest start admin",
+    "start:admin:dev": "nest start admin --watch",
+    "build": "nest build api",
+    "build:admin": "nest build admin"
+  },
+  "dependencies": {
+    "@nestjs/common": "^11.0.0",
+    "@nestjs/core": "^11.0.0",
+    "@nestjs/platform-express": "^11.0.0",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.1"
+  },
+  "devDependencies": {
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@types/node": "^22.0.0",
+    "typescript": "^5.7.0"
+  }
+}
