@@ -1,0 +1,1 @@
+Lưu 6 ảnh Postman thật vào đây: Bai1.png đến Bai6.png.
